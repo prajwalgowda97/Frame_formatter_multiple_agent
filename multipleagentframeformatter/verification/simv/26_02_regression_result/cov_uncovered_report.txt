@@ -1,0 +1,217 @@
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+<> User: vvtrainee39
+
+Host: compute-srv4.eda.atme.in
+
+Report date: Sun 26 Feb 2023 21:46:49 IST
+
+Report options: -detail -text -out cov_uncovered_report.txt
+
+Coverage database path: /home/vvtrainee39/ganesh/multipleagentframeformatter/verification/simv/cov_work/scope/cov_merged_output
+
+Coverage model files: /home/vvtrainee39/ganesh/multipleagentframeformatter/verification/simv/cov_work/scope/cov_merged_output/icc_379e5ae0_28f56172.ucm
+
+Coverage data files: /home/vvtrainee39/ganesh/multipleagentframeformatter/verification/simv/cov_work/scope/cov_merged_output/icc_379e5ae0_28f56172.ucd
+
+CCF files:  /home/vvtrainee39/ganesh/multipleagentframeformatter/verification/simv/cov_files/cov_cmd.cf (out-of-date)
+
+
+Coverage database date: Sun 26 Feb 2023 20:33:27 IST
+
+*** There were no refinement files applied ***
+
+ <>
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+Coverage Table Legend
+---------------------
+  EXCL   excluded using refinement rule
+  P-EXCL excluded from parent
+  U-EXCL excluded and unreachable by IEV
+  T-EXCL excluded from type
+  S-EXCL smart excluded using refinement rule
+  EXCL(S) smart indirect excluded
+  EMPTY  all children are excluded
+  CONST  marked constant during simulation
+  IGN    marked ignored during simulation
+  UNG    marked ungradeable during simulation
+  DES    marked deselected during simulation
+  UNR    marked unreachable by IEV
+
+
+Uncovered Block Detail Report, Instance Based
+=============================================
+
+Instance name: frame_formatter_top.ethernet_frame_formatter
+Type name: frame_formatter
+File name: /home/vvtrainee39/ganesh/multipleagentframeformatter/RTL/revision15/core/frame_formatter.sv
+Number of uncovered blocks: 6 of 209
+Number of unreachable blocks: 0
+
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+0      114   647   true part of         646    begin                          
+0      127   690   true part of         689    begin                          
+0      149   793   false part of        785    begin                          
+0      188   1166  false part of        1159   begin                          
+0      194   1186  false part of        1179   begin                          
+0      204   1278  true part of         1277   begin                          
+
+Uncovered Expression Detail Report, Instance Based
+==================================================
+
+Expression coverage Table Legend
+---------------------
+  -      don't care
+  e      event for event-or expressions
+  O (odd), E (even), B (both), X (not scored),
+         I (marked ignore) for parity trees
+  Y (covered), N (not covered), C (constant), 
+  P (one or more inputs for this bit have been padded) for vector scoring, 
+  d=== , b=== shows which bit differs in vector scoring 
+  rval   Resulting value of the expression for coverage purposes given
+         the input values
+  <-n->  Shows the n-th term composition
+
+
+Instance name: frame_formatter_top.async_fifo2
+Type name: async_fifo
+File name: /home/vvtrainee39/ganesh/multipleagentframeformatter/RTL/revision15/core/async_fifo.sv
+Number of uncovered expressions: 1 of 54
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+10.1   | 50.00% (1/2)  | 259    | ! rd_valid                                         
+
+index: 10.1 grade: 50.00% (1/2) line: 259 source: else if(!rd_valid)
+
+! rd_valid
+  <--1--->
+
+index     | hit   | <1> 
+------------------------ '!'
+10.1.1    | 0     | 1   
+
+
+Instance name: frame_formatter_top.ethernet_frame_formatter
+Type name: frame_formatter
+File name: /home/vvtrainee39/ganesh/multipleagentframeformatter/RTL/revision15/core/frame_formatter.sv
+Number of uncovered expressions: 11 of 137
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+26.1   | 75.00% (3/4)  | 674    | ((! sync_fifo_rd_en) && in_bypass_en_latch) || (((! sync_fifo_rd_en) && (! in_bypass_en_latch)) && (! vlan_tag_en_latch)) 
+27.1   | 50.00% (2/4)  | 679    | ((! sync_fifo_rd_en_d1) && (! in_bypass_en_latch)) && vlan_tag_en_latch 
+28.1   | 50.00% (2/4)  | 689    | (ff_in_eop_d1 && ff_in_sop) && in_bypass_en        
+35.1   | 50.00% (2/4)  | 785    | ((counter == 7'd6) && vlan_tag_en_latch) || ((counter == 7'd5) && (! vlan_tag_en_latch)) 
+47.1   | 50.00% (1/2)  | 1159   | count_header >= 3'd6                               
+48.1   | 66.67% (2/3)  | 1171   | ff_in_bypass_en_header && (! vlan_tag_en_latch)    
+50.1   | 50.00% (1/2)  | 1179   | count_header >= 4'd5                               
+54.1   | 50.00% (1/2)  | 1288   | pstate == DATA_TRANSFER                            
+
+index: 26.1 grade: 75.00% (3/4) line: 674 source: else if((!sync_fifo_rd_en && in_bypass_en_latch) || (!sync_fifo_rd_en && !in_bypass_en_latch && !vlan_tag_en_latch))
+
+((! sync_fifo_rd_en) && in_bypass_en_latch) || (((! sync_fifo_rd_en) && (! in_bypass_en_latch)) && (! vlan_tag_en_latch))
+    <------1------>     <-------2-------->                                                            <-------3------->
+
+index     | hit   | rval | <1> <2> <3> 
+---------------------------------------
+26.1.4    | 0     | 0    | 1   -   -   
+
+index: 27.1 grade: 50.00% (2/4) line: 679 source: else if(!sync_fifo_rd_en_d1 && !in_bypass_en_latch && vlan_tag_en_latch)
+
+((! sync_fifo_rd_en_d1) && (! in_bypass_en_latch)) && vlan_tag_en_latch
+    <-------1-------->        <-------2-------->      <-------3------->
+
+index     | hit   | rval | <1> <2> <3> 
+---------------------------------------
+27.1.2    | 0     | 0    | -   -   0   
+27.1.3    | 0     | 0    | -   1   -   
+
+index: 28.1 grade: 50.00% (2/4) line: 689 source: else if(ff_in_eop_d1 && ff_in_sop && in_bypass_en)
+
+(ff_in_eop_d1 && ff_in_sop) && in_bypass_en
+ <----1----->    <---2--->     <----3----->
+
+index     | hit   | <1> <2> <3> 
+-------------------------------- '&&'
+28.1.1    | 0     | 0   -   -   
+28.1.4    | 0     | 1   1   1   
+
+index: 35.1 grade: 50.00% (2/4) line: 785 source: else if((counter == 7'd6 && vlan_tag_en_latch) || (counter == 7'd5 && !vlan_tag_en_latch))
+
+((counter == 7'd6) && vlan_tag_en_latch) || ((counter == 7'd5) && (! vlan_tag_en_latch))
+ <-------1------->    <-------2------->      <-------3------->
+
+index     | hit   | rval | <1> <2> <3> 
+---------------------------------------
+35.1.3    | 0     | 0    | -   0   0   
+35.1.4    | 0     | 0    | 0   1   -   
+
+index: 47.1 grade: 50.00% (1/2) line: 1159 source: else if(count_header >= 3'd6)
+
+count_header >= 3'd6
+<----1----->    <2->
+
+index     | hit   | <1>   <2>   
+-------------------------------- '>='
+47.1.1    | 0     | lhs < rhs   
+
+index: 48.1 grade: 66.67% (2/3) line: 1171 source: else if(ff_in_bypass_en_header && !vlan_tag_en_latch)
+
+ff_in_bypass_en_header && (! vlan_tag_en_latch)
+<---------1---------->       <-------2------->
+
+index     | hit   | rval | <1> <2> 
+-----------------------------------
+48.1.2    | 0     | 0    | -   1   
+
+index: 50.1 grade: 50.00% (1/2) line: 1179 source: else if(count_header >= 4'd5)
+
+count_header >= 4'd5
+<----1----->    <2->
+
+index     | hit   | <1>   <2>   
+-------------------------------- '>='
+50.1.1    | 0     | lhs < rhs   
+
+index: 54.1 grade: 50.00% (1/2) line: 1288 source: else if(pstate == DATA_TRANSFER)
+
+pstate == DATA_TRANSFER
+<-1-->    <-----2----->
+
+index     | hit   | <1>   <2>   
+-------------------------------- '=='
+54.1.2    | 0     | lhs != rhs  
+
+
+Uncovered Toggle Detail Report, Instance Based
+==============================================
+
+Instance name: frame_formatter_top.ethernet_frame_formatter
+Type name: frame_formatter
+File name: /home/vvtrainee39/ganesh/multipleagentframeformatter/RTL/revision15/core/frame_formatter.sv
+Number of uncovered signal bits: 5 of 586
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 0 of 586
+Number of signal bits partially toggled(fall): 0 of 586
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          async_fifo_wr_en_temp1    
+0          0          0          async_fifo_wr_en_temp     
+0          0          0          wr_en_t                   
+0          0          0          sync_fifo_rd_en_count[6]  
+0          0          0          f[3]                      
+
+Uncovered Fsm Detail Report, Instance Based
+===========================================
+
+Uncovered Assertion Detail Report, Instance Based
+=================================================
+
+Uncovered CoverGroup Detail Report, Instance Based
+==================================================
+

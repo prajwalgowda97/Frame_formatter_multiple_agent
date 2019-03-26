@@ -1,0 +1,15 @@
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1 +UVM_TESTNAME=frame_formatter_initial_reset_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 2 +UVM_TESTNAME=frame_formatter_reset_scenarios_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 3 +UVM_TESTNAME=frame_formatter_ibypass_enable_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 4 +UVM_TESTNAME=frame_formatter_ibypass_disable_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 5 +UVM_TESTNAME=frame_formatter_sync_fifo_full_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 6 +UVM_TESTNAME=frame_formatter_async_fifo_empty_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 7 +UVM_TESTNAME=frame_formatter_vlan_tag_disable_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 8 +UVM_TESTNAME=frame_formatter_multiple_write_multiple_read_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 9 +UVM_TESTNAME=frame_formatter_multiple_write_one_read_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 10 +UVM_TESTNAME=frame_formatter_zero_write_multiple_read_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 11 +UVM_TESTNAME=frame_formatter_random_write_read_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 12 +UVM_TESTNAME=frame_formatter_ibypass_vlan_random_test
+irun -access +rwc -f ./../uvme/compile.f -coverage all -covdut frame_formatter_top_tb -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 12 +UVM_TESTNAME=frame_formatter_soft_reset_test
+
+

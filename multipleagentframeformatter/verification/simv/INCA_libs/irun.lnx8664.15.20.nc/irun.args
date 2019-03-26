@@ -1,0 +1,23 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-access
++rwc
+-f
+./../uvme/compile.f
+-svseed
+72498
++UVM_TESTNAME=frame_formatter_multiple_write_multiple_read_test
++define+UVM_REPORT_DISABLE_FILE_LINE
+-coverage
+all
+-covdut
+frame_formatter_top
+-covworkdir
+/cov_work
+-covoverwrite
+-covfile
+./cov_files/cov_cmd.cf
+-uvmhome
+CDNS-1.1d

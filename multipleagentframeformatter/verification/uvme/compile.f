@@ -1,0 +1,12 @@
+./../../RTL/revision15/core/frame_formatter_top.sv
+./../../RTL/revision15/core/sync_fifo.sv
+./../../RTL/revision15/core/frame_formatter.sv
+./../../RTL/revision15/core/async_fifo.sv
+./../../RTL/revision15/core/b2g_converter.sv
+./../../RTL/revision15/core/g2b_converter.sv
+./../uvme/top/frame_formatter_clk_interface.sv
+./../uvme/top/frame_formatter_fifo_interface.sv
+./../uvme/top/frame_formatter_header_interface.sv
+./../uvme/top/frame_formatter_packet_interface.sv
+./../uvme/package/frame_formatter_pkg.sv
+./../uvme/top/frame_formatter_top_tb.sv

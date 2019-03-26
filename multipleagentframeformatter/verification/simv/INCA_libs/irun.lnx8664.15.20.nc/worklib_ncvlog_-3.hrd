@@ -1,0 +1,12 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-DEFINE
+UVM_REPORT_DISABLE_FILE_LINE
+-I_INCDIR
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv
