@@ -1,5 +1,3 @@
-
-
 module frame_formatter_top_tb;
 	import uvm_pkg::*;
 	import frame_formatter_pkg::*;
@@ -9,13 +7,6 @@ module frame_formatter_top_tb;
 	frame_formatter_header_interface header_vif();
 	frame_formatter_packet_interface packet_vif();
 	frame_formatter_fifo_interface fifo_vif();
-
-
-
-
-
-            
-
 
 	initial begin 
 		uvm_config_db #(virtual frame_formatter_clk_interface):: set(null,"*","clk_vif",clk_vif);
@@ -30,9 +21,6 @@ module frame_formatter_top_tb;
 	initial begin 
  		uvm_config_db #(virtual frame_formatter_packet_interface):: set(null,"*","packet_vif",packet_vif);
 	end
-
-
-
 
 	initial begin 
  		run_test();
@@ -55,10 +43,6 @@ module frame_formatter_top_tb;
 	packet_vif.Frame_Formatter_TOP_rstn=1;
 
 end
-
-
-
-
 	initial begin 
 
  		forever begin 
